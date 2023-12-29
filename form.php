@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             '$nik_ayah', '$tahun_lahir_ayah', '$pendidikan_ayah', '$pekerjaan_ayah', 
             '$nama_ibu', '$nik_ibu', '$tahun_lahir_ibu', '$pendidikan_ibu', 
             '$pekerjaan_ibu', '$penghasilan_orang_tua', '$nama_wali', '$nik_wali', 
-            '$tahun_lahir_wali', '$pekerjaan_wali', '$alamat_wali', '$desa', '$kecamatan', 
+            " . ($tahun_lahir_wali ? "'$tahun_lahir_wali'" : 'NULL') . ", '$pekerjaan_wali', '$alamat_wali', '$desa', '$kecamatan', 
             '$kabupaten', '$kode_pos', '$provinsi', '$nomor_kontak', '$email')";
 
     //eksekusi kueri
