@@ -61,30 +61,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $submit = $_POST['submit'];
 
-}
+    //buat kueri untuk menyimpan data
+    $sql = "INSERT INTO db_form (nama, tempat_lahir, tanggal_lahir, alamat, nisn, nik, 
+            kelamin, keluarga, anak_ke, jml_saudara, sekolah_asal, nisn_sekolah_asal, 
+            alamat_sekolah_asal, nomor_kk, nama_ayah, nik_ayah, tahun_lahir_ayah,  
+            pendidikan_ayah, pekerjaan_ayah, nama_ibu, nik_ibu, tahun_lahir_ibu, 
+            pendidikan_ibu, pekerjaan_ibu, penghasilan_orang_tua, nama_wali, nik_wali, 
+            tahun_lahir_wali, pekerjaan_wali, alamat_wali, desa, kecamatan, kabupaten, 
+            kode_pos, provinsi, nomor_kontak, email)
+            VALUES ('$nama', '$tempat_lahir', '$tanggal_lahir', '$alamat', '$nisn', 
+            '$nik', '$kelamin', '$keluarga', '$anak_ke', '$jml_saudara', '$sekolah_asal', 
+            '$nisn_sekolah_asal', '$alamat_sekolah_asal', '$nomor_kk', '$nama_ayah', 
+            '$nik_ayah', '$tahun_lahir_ayah', '$pendidikan_ayah', '$pekerjaan_ayah', 
+            '$nama_ibu', '$nik_ibu', '$tahun_lahir_ibu', '$pendidikan_ibu', 
+            '$pekerjaan_ibu', '$penghasilan_orang_tua', '$nama_wali', '$nik_wali', 
+            '$tahun_lahir_wali', '$pekerjaan_wali', '$alamat_wali', '$desa', '$kecamatan', 
+            '$kabupaten', '$kode_pos', '$provinsi', '$nomor_kontak', '$email')";
 
-//buat kueri untuk menyimpan data
-$sql = "INSERT INTO db_form (nama, tempat_lahir, tanggal_lahir, alamat, nisn, nik, 
-        kelamin, keluarga, anak_ke, jml_saudara, sekolah_asal, nisn_sekolah_asal, 
-        alamat_sekolah_asal, nomor_kk, nama_ayah, nik_ayah, tahun_lahir_ayah,  
-        pendidikan_ayah, pekerjaan_ayah, nama_ibu, nik_ibu, tahun_lahir_ibu, 
-        pendidikan_ibu, pekerjaan_ibu, penghasilan_orang_tua, nama_wali, nik_wali, 
-        tahun_lahir_wali, pekerjaan_wali, alamat_wali, desa, kecamatan, kabupaten, 
-        kode_pos, provinsi, nomor_kontak, email)
-        VALUES ('$nama', '$tempat_lahir', '$tanggal_lahir', '$alamat', '$nisn', 
-        '$nik', '$kelamin', '$keluarga', '$anak_ke', '$jml_saudara', '$sekolah_asal', 
-        '$nisn_sekolah_asal', '$alamat_sekolah_asal', '$nomor_kk', '$nama_ayah', 
-        '$nik_ayah', '$tahun_lahir_ayah', '$pendidikan_ayah', '$pekerjaan_ayah', 
-        '$nama_ibu', '$nik_ibu', '$tahun_lahir_ibu', '$pendidikan_ibu', 
-        '$pekerjaan_ibu', '$penghasilan_orang_tua', '$nama_wali', '$nik_wali', 
-        '$tahun_lahir_wali', '$pekerjaan_wali', '$alamat_wali', '$desa', '$kecamatan', 
-        '$kabupaten', '$kode_pos', '$provinsi', '$nomor_kontak', '$email')";
-
-//eksekusi kueri
-if ($conn->query($sql) === TRUE) {
-    echo "Data Berhasil disimpan ke DataBase.";
-} else {
-    echo "Error : " . $sql . "<br>" . $conn->error;
+    //eksekusi kueri
+    if ($conn->query($sql) === TRUE) {
+        echo "Data Berhasil disimpan ke DataBase.";
+    } else {
+        echo "Error : " . $sql . "<br>" . $conn->error;
+    }        
 }
 
 //tutup koneksi
