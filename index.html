@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pendaftaran</a></li>
+                <li><a href="#">Tentang</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="judul">
+        <div class="a">Madrasah Aliyah</div>
+        <div class="b">TANWIRIYYAH</div>
+    </div>
+    <div class="judul2">
+        PENDAFTARAN PESERTA DIDIK BARU
+    </div>
+    <div class="formulir">
+        <div><h1 class="jdlForm">Syarat dan Ketentuan</h1></div>
+        <span class="jdlSdK">
+            A. SYARAT PENDAFTARAN            
+        </span>
+        <ol class="isiSdK">
+            <li>            
+                Surat Keterangan Kelulusan (Asli)
+            </li>
+            <li>
+                FC. Ijazah SMP/MTs (Jika Sudah Ada) | Dilegalisir | 3 Lembar
+            </li>
+            <li>
+                FC. Raport | Dilegalisir | 3 Lembar
+            </li>
+            <li>
+                Surat Keterangan Kelakuan Baik dari Sekolah Asal
+            </li>
+            <li>
+                FC. Akta Kelahiran | 1 Lembar
+            </li>
+            <li>
+                FC. Kartu Keluarga | 1 Lembar
+            </li>
+            <li>
+                FC. KTP Orangtua (Ayah&Ibu) | 1 Lembar
+            </li>
+            <li>
+                FC. Kartu Bantuan Sosial (SKTM/KIP/KIS/PKH); Bagi Yang Memiliki | 2 Lembar
+            </li>
+            <li>
+                Mengisi Formulir Pendaftaran Online dibawah ini
+            </li>
+            <li>
+                Keuangan yang masuk minimal 20%. Jika batal, tidak dapat diambil kembali, tetapi diniatkan infaq ke lembaga sebagai 'amal jariyah
+            </li>
+        </ol>
+        <span class="jdlSdK">
+            B. BIAYA PENDAFTARAN
+        </span>
+        <ol class="isiSdK">
+            <li>
+                Uang Dana Tahunan (UDT) : Rp 2.000.000,-
+            </li>
+            <li>
+                Dana Partisipasi Orangtua : Rp 1.500.000,-
+            </li>
+            <li>
+                Perlengkapan Sekolah : Rp 1.150.000,-
+            </li>
+        </ol>
+        <span class="jdlSdK">
+            JUMLAH : Rp 4.650.000,- 
+        </span>
+    </div>
+    <div class="formulir">
+        <div><h1 class="jdlForm">FORMULIR</h1></div>
+        <form class="form" name="formMurid" method="post" action="form.php">
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Nama :
+                </label><br>
+                <input type="text" name="nama" id="nama" class="inputtext" required>
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Tempat Lahir :
+                </label><br>
+                <input type="text" name="tempat_lahir" id="tmptLahir" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Tanggal Lahir :
+                </label><br>
+                <input type="date" name="tanggal_lahir" id="tglLahir" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Alamat :
+                </label><br>
+                <textarea name="alamat" id="almt" cols="30" rows="5" class="inputtext"></textarea>
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Nomor Induk Siswa Nasional (NISN) :
+                </label><br>
+                <input type="number" name="nisn" id="nisnSiswa" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Nomor Induk Kependudukan (NIK) :
+                </label><br>
+                <input type="number" name="nik" id="nikSiswa" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Jenis Kelamin :
+                </label><br>
+                <div class="radio">
+                    <input type="radio" id="cowo" name="kelamin" value="Laki-laki">
+                    <label for="laki-laki">Laki-laki</label><br>
+                    <input type="radio" id="cewe" name="kelamin" value="Perempuan">
+                    <label for="perempuan">Perempuan</label><br>
+                </div>
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Status Dalam Keluarga :
+                </label><br>
+                <div class="radio">
+                    <input type="radio" name="statusKeluarga" id="sulung" value="Sulung">
+                    <label for="sulung">Sulung</label><br>
+                    <input type="radio" name="statusKeluarga" id="tengah" value="Tengah">
+                    <label for="tengah">Tengah</label><br>
+                    <input type="radio" name="statusKeluarga" id="bungsu" value="Bungsu">
+                    <label for="bungsu">Bungsu</label><br>
+                </div>
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Anak ke Berapa :
+                </label><br>
+                <input type="text" name="anakBrp" id="ankBrp" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Jumlah Saudara :
+                </label><br>
+                <input type="number" name="jmlhSdr" id="jmlhSdr" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Nama Sekolah Asal :
+                </label><br>
+                <input type="text" name="sekolahAsal" id="SekolahAsal" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Nomor Pokok Sekolah Nasional (NPSN) Sekolah Asal :
+                </label><br>
+                <input type="number" name="nisnSekolah" id="nisnSekolah" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Alamat Sekolah Asal :
+                </label><br>
+                <textarea name="SekolahAsal" id="almtSklhAsal" cols="30" rows="5" class="inputtext"></textarea>
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Nomor Kartu Keluarga (KK) :
+                </label><br>
+                <input type="number" name="nmrKK" id="nmrKK" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Nama Lengkap Ayah :
+                </label><br>
+                <input type="text" name="namaAyah" id="namaAyah" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Nomor Induk Kependudukan (NIK) Ayah :
+                </label><br>
+                <input type="number" name="nikAyah" id="nikAyah" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Tahun Lahir Ayah :
+                </label><br>
+                <input type="date" name="thnAyah" id="thnAyah" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Pendidikan Terakhir Ayah :
+                </label><br>
+                <div class="radio">
+                    <input type="radio" name="pnddknAyah" id="sd/mi/sederajat">
+                    <label for="sd/mi/sederajat">SD/MI/Sederajat</label><br>
+                    <input type="radio" name="pnddknAyah" id="smp/mts/sederajat">
+                    <label for="smp/mts/sederajat">SMP/MTs/Sederajat</label><br>
+                    <input type="radio" name="pnddknAyah" id="sma/ma/sederajat">
+                    <label for="sma/ma/sederajat">SMA/MA/Sederajat</label><br>
+                    <input type="radio" name="pnddknAyah" id="d1">
+                    <label for="d1">D1</label><br>
+                    <input type="radio" name="pnddknAyah" id="d2">
+                    <label for="d2">D2</label><br>
+                    <input type="radio" name="pnddknAyah" id="d3">
+                    <label for="d3">D3</label><br>
+                    <input type="radio" name="pnddknAyah" id="s1">
+                    <label for="s1">S1</label><br>
+                    <input type="radio" name="pnddknAyah" id="s2">
+                    <label for="s2">S2</label><br>
+                    <input type="radio" name="pnddknAyah" id="s3">
+                    <label for="s3">S3</label><br>
+                </div>
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Pekerjaan Ayah :
+                </label><br>
+                <input type="text" name="pkrjnAyah" id="pkrjnAyah" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Nama Lengkap Ibu :
+                </label><br>
+                <input type="text" name="namaIbu" id="namaIbu" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Nomor Induk Kependudukan (NIK) Ibu :
+                </label><br>
+                <input type="number" name="nikIbu" id="nikIbu" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Tahun Lahir Ibu :
+                </label><br>
+                <input type="date" name="thnIbu" id="thnIbu" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Pendidikan Terakhir Ibu :
+                </label><br>
+                <div class="radio">
+                    <input type="radio" name="pnddknIbu" id="sd/mi/sederajat">
+                    <label for="sd/mi/sederajat">SD/MI/Sederajat</label><br>
+                    <input type="radio" name="pnddknIbu" id="smp/mts/sederajat">
+                    <label for="smp/mts/sederajat">SMP/MTs/Sederajat</label><br>
+                    <input type="radio" name="pnddknIbu" id="sma/ma/sederajat">
+                    <label for="sma/ma/sederajat">SMA/MA/Sederajat</label><br>
+                    <input type="radio" name="pnddknIbu" id="d1">
+                    <label for="d1">D1</label><br>
+                    <input type="radio" name="pnddknIbu" id="d2">
+                    <label for="d2">D2</label><br>
+                    <input type="radio" name="pnddknIbu" id="d3">
+                    <label for="d3">D3</label><br>
+                    <input type="radio" name="pnddknIbu" id="s1">
+                    <label for="s1">S1</label><br>
+                    <input type="radio" name="pnddknIbu" id="s2">
+                    <label for="s2">S2</label><br>
+                    <input type="radio" name="pnddknIbu" id="s3">
+                    <label for="s3">S3</label><br>
+                </div>
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Pekerjaan Ibu :
+                </label><br>
+                <input type="text" name="pkrjnIbu" id="pkrjnIbu" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Penghasilan Orang Tua :
+                </label><br>
+                <div class="radio">
+                    <input type="radio" name="penghasilan" id="<=500000" value="<=500000">
+                    <label for=""><= Rp.500.000</label><br>
+                    <input type="radio" name="penghasilan" id="500000sd1000000" value="500000sd1000000">
+                    <label for="">Rp.500.000 - Rp.1.000.000</label><br>
+                    <input type="radio" name="penghasilan" id="1000000sd3000000" value="1000000sd3000000">
+                    <label for="">Rp.1.000.000 - Rp.3.000.000</label><br>
+                    <input type="radio" name="penghasilan" id="3000000sd5000000" value="3000000sd5000000">
+                    <label for="">Rp.3.000.000 - Rp.5.000.000</label><br>
+                    <input type="radio" name="penghasilan" id=">=5000000" value=">=5000000">
+                    <label for="">>= Rp.5.000.000</label><br>
+                </div>
+            </div>
+            <!--
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Nomor HandPhone Orang Tua/Wali :
+                </label><br>
+                <input type="number" name="" id="" class="inputtext">
+            </div>
+            -->
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Nama Lengkap Wali :
+                </label><br>
+                <input type="text" name="namaWali" id="namaWali" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Nomor Induk Kependudukan (NIK) Wali :
+                </label><br>
+                <input type="number" name="nikWali" id="nikWali" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Tahun Lahir Wali :
+                </label><br>
+                <input type="date" name="thnLahirWali" id="thnLahirWali" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Pekerjaan Wali :
+                </label><br>
+                <input type="text" name="pkrjnWali" id="pkrjnWali" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Alamat Rumah Wali :
+                </label><br>
+                <textarea name="almtWali" id="almtWali" cols="30" rows="5" class="inputtext"></textarea>
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Desa/Kelurahan :
+                </label><br>
+                <input type="text" name="desa" id="desa" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Kecamatan :
+                </label><br>
+                <input type="text" name="kecamatan" id="kecamatan" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Kabupaten :
+                </label><br>
+                <input type="text" name="kabupaten" id="kabupaten" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Kode Pos :
+                </label><br>
+                <input type="number" name="kodepos" id="kodepos" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Provinsi :
+                </label><br>
+                <input type="text" name="provinsi" id="provinsi" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    Nomor Kontak yang bisa dihubungi untuk konfirmasi pendaftaran :
+                </label><br>
+                <input type="number" name="nmrkonfirmasi" id="nmrkonfirmasi" class="inputtext">
+            </div>
+            <div class="boxTextForm">
+                <label for="nameform">
+                    E-Mail Siswa/Orang Tua (Wajib Aktif) :
+                </label><br>
+                <input type="email" name="email" id="email" class="inputtext">
+            </div>
+            <div>
+                <button type="submit" name="submit" class="btnSimpan">Kirim Data</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
