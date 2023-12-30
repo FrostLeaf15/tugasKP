@@ -1,5 +1,22 @@
 <?php
+ob_clean(); //Membersihkan buffer
 require('fpdf186/fpdf.php');
+
+$host = "localhost";
+$dbname = "formulirsekolah";
+$username = "root";
+$password = "";
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Koneksi ke database gagal: " . $e->getMessage();
+}
+
+$query = "SELECT * FROM db_form ORDER BY id DESC LIMIT 1";
+$stmt = $pdo->query($query);
+$data = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Create a PDF document
 $pdf = new FPDF();
@@ -9,8 +26,16 @@ $pdf->AddPage();
 $pdf->SetFont('Arial', 'B', 16);
 
 // Add title
-$pdf->Cell(40, 10, 'Formulir Data Siswa');
+$pdf->Cell(40, 10, 'Formulir Data Siswa', 0, 1, 'C');
 
+//Set font
+$pdf->SetFont('Arial', '', 12);
+
+foreach ($data as $key => $value) {
+    $pdf->Cell(0, 10, ucfirst($key) . ": $value", 0, 1);
+}
+
+/*
 // Add data from the form (replace these with your actual form data)
 $pdf->Ln(); // Move to the next line
 $pdf->Cell(40, 10, 'Nama: ' . $_POST['nama']);
@@ -51,7 +76,8 @@ $pdf->Cell(40, 10, 'Provinsi: ' . $_POST['provinsi']);
 $pdf->Cell(40, 10, 'Nomor yang dapat dihubungi: ' . $_POST['nmrkonfirmasi']);
 $pdf->Cell(40, 10, 'E-Mail aktif: ' . $_POST['email']);
 // Add more cells for other form fields
+*/
 
 // Output the PDF to the browser or save it to a file
-$pdf->Output('formulir.pdf', 'D');
+$pdf->Output('D', 'formulir.pdf');
 ?>
