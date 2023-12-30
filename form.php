@@ -30,8 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $anak_ke = $_POST['anakBrp'];
     $jml_saudara = $_POST['jmlhSdr'];
     $sekolah_asal = $_POST['sekolahAsal'];
-    $nisn_sekolah_asal = $_POST['nisnSekolah'];
-    $alamat_sekolah_asal = $_POST['SekolahAsal'];
+    $npsn_sekolah_asal = $_POST['npsnSekolah'];
+    $alamat_sekolah_asal = $_POST['almtSekolahAsal'];
     $nomor_kk = $_POST['nmrKK'];
     $nama_ayah = $_POST['namaAyah'];
     $nik_ayah = $_POST['nikAyah'];
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //buat kueri untuk menyimpan data
     $sql = "INSERT INTO db_form (nama, tempat_lahir, tanggal_lahir, alamat, nisn, nik, 
-            kelamin, keluarga, anak_ke, jml_saudara, sekolah_asal, nisn_sekolah_asal, 
+            kelamin, keluarga, anak_ke, jml_saudara, sekolah_asal, npsn_sekolah_asal, 
             alamat_sekolah_asal, nomor_kk, nama_ayah, nik_ayah, tahun_lahir_ayah,  
             pendidikan_ayah, pekerjaan_ayah, nama_ibu, nik_ibu, tahun_lahir_ibu, 
             pendidikan_ibu, pekerjaan_ibu, penghasilan_orang_tua, nama_wali, nik_wali, 
@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             kode_pos, provinsi, nomor_kontak, email)
             VALUES ('$nama', '$tempat_lahir', '$tanggal_lahir', '$alamat', '$nisn', 
             '$nik', '$kelamin', '$keluarga', '$anak_ke', '$jml_saudara', '$sekolah_asal', 
-            '$nisn_sekolah_asal', '$alamat_sekolah_asal', '$nomor_kk', '$nama_ayah', 
+            '$npsn_sekolah_asal', '$alamat_sekolah_asal', '$nomor_kk', '$nama_ayah', 
             '$nik_ayah', '$tahun_lahir_ayah', '$pendidikan_ayah', '$pekerjaan_ayah', 
             '$nama_ibu', '$nik_ibu', '$tahun_lahir_ibu', '$pendidikan_ibu', 
             '$pekerjaan_ibu', '$penghasilan_orang_tua', '$nama_wali', '$nik_wali', 
@@ -83,7 +83,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Data Berhasil disimpan ke DataBase.";
     } else {
         echo "Error : " . $sql . "<br>" . $conn->error;
-    }        
+    }
+    
+    header("Location: generated_pdf.php");
+    exit();
+    
 }
 
 //tutup koneksi
