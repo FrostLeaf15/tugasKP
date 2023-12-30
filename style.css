@@ -130,10 +130,13 @@ th {
     background-size: cover;
     color: #fff;
     margin-left: 14px;
-    font-size: 14px;
+    font-size: 18px;
     min-width: auto;
     text-align: center;
     -webkit-tap-highlight-color: transparent;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 10px;
 }
 
 .jdlSdK {
